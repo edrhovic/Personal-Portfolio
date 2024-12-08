@@ -1,0 +1,370 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styles */
+body {
+    color: #f9f4f5;
+    background-color: #222;
+}
+
+.profile-header, .profile-details, .modal-body, .modal-header, .modal-footer, .delete-modal .modal-body p {
+    color: #f9f4f5;
+}
+
+.profile-header {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.profile-img {
+    box-shadow: 0px 1px 34px 0px rgba(0,0,0,0.75);
+}
+
+.profile-details {
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.edit-btn, .delete-btn {
+    background-color: rgba(128, 128, 128, 0.6);
+    color: #f9f4f5;
+    border: none;
+    border-radius: 1em;
+    padding: 1em 3em;
+    font-size: 1em;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    transform: scale(1.02);
+    background-color: #505f36;
+}
+
+.delete-btn:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+.modal-body, .modal-header {
+    background-color: rgba(29, 29, 29, 0.9);
+}
+
+.modal-body input {
+    color: #f9f4f5;
+    background-color: gray;
+    border: none;
+}
+
+.modal-footer {
+    background-color: rgba(29, 29, 29, 0.9);
+}
+
+.delete-modal .modal-content {
+    background-color: rgba(29, 29, 29, 0.9);
+    color: #f9f4f5;
+    border-radius: 1em;
+    padding: 2em;
+}
+
+.delete-modal .modal-header {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.modal-close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* Flash Messages */
+.flash-messages {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.flash-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.flash-message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.flash-message.info {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.flash-message.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Layouts */
+.containerz {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media-accounts {
+    margin: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 3em;
+    text-align: start;
+}
+
+.container1 h2, h3 {
+    color: #f9f4f5;
+}
+
+.column1 {
+    background-color: #70587C;
+    border-radius: 1rem;
+    height: 50rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    width: 50%;
+}
+
+.column1-content {
+    margin: 2em;
+}
+
+.column1-content h5 {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.btn {
+    background-color: gray;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+}
+
+.btn-primary:hover {
+    background-color: rgb(74, 33, 74);
+    transform: scale(1.02);
+}
+
+.btn-danger:hover {
+    transform: scale(1.02);
+}
+
+.list-group-item {
+    color: white;
+    background-color: gray;
+    font-size: 1.2em;
+}
+
+.icons {
+    margin-right: 2em;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    width: 5em;
+}
+
+.icons a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .profile-header {
+        font-size: 1.3em;
+        gap: 1.5em;
+    }
+
+    .profile-header img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .profile-details {
+        font-size: 1.1em;
+    }
+
+    .edit-btn, .delete-btn {
+        font-size: 0.9em;
+        padding: 0.8em 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        font-size: 1.2em;
+        gap: 1.2em;
+    }
+
+    .profile-header img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .profile-details {
+        font-size: 1em;
+    }
+
+    .edit-btn, .delete-btn {
+        font-size: 0.85em;
+        padding: 0.7em 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        font-size: 1.1em;
+        gap: 1em;
+    }
+
+    .profile-header img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .profile-details {
+        font-size: 0.9em;
+    }
+
+    .edit-btn, .delete-btn {
+        font-size: 0.8em;
+        padding: 0.6em 1.2em;
+    }
+}
+
+
+/* Minimal Animations */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide In from Left */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-10%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Slide In from Right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(10%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.slideInLeft {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+.slideInRight {
+    animation: slideInRight 0.5s ease-out;
+}
+
+.profile-img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Button Hover Effect */
+.edit-btn:hover, .delete-btn:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+}
+
+/* Minimalist Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fadeIn to the profile */
+.fadeIn {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Use minimal scaling on hover for images */
+.profile-img {
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);  /* Slight zoom-in effect */
+}
+
+/* Button Hover Effect */
+.edit-btn:hover, .delete-btn:hover {
+    transform: scale(1.03); /* Subtle scaling effect */
+    transition: transform 0.2s ease;
+}
+
+/* Column Slide-In Minimal Animation */
+@keyframes slideInMinimal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply simple slide-in effect */
+.animate__slideInLeft, .animate__slideInRight {
+    animation: slideInMinimal 1s ease-out;
+}
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div class="nav-bar" id="nav-bar">
+        <div id="hamburger" class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div id="logo" style="font-family: 'Bungee Shade';">ED</div>
+        <ul id="menu" class="menu">
+            <li><a href="{{ url_for('blueprint.dashboard') }}">Home</a></li>
+            <li><a href="{{ url_for('blueprint.blog') }}">Blog</a></li>
+            <li><a href="{{ url_for('blueprint.profile') }}">My Profile</a></li>
+            <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+        </ul>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <script>
+        function toggleMenu() {
+            const navBar = document.getElementById('nav-bar');
+            navBar.classList.toggle('open');
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

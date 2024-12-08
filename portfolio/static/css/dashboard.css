@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f9f4f5;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Monospace";
+    font-size: 1rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    max-width: 85em;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 100%;
+    border-radius: 1rem;
+    animation: slide-in 1s ease-out;
+    font-size: 1rem;
+}
+
+.image-container img {
+    width: 25rem;
+    height: 25rem;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1.2rem 0px rgba(0, 0, 0, 0.75);
+    animation: bounce-in 1s ease-out, float 3s ease-in-out infinite;
+}
+
+.about-myself-container {
+    max-width: 85rem;
+    padding: 2rem;
+    color: #f9f4f5;
+    background-color: #70587C;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 0.625rem rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    animation: fade-in 1.5s ease-in-out;
+    line-height: 1.8;
+    font-size: 1.5rem;
+}
+
+.about-myself-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+    text-shadow: 0px 0.125rem 0.3125rem rgba(0, 0, 0, 0.5);
+}
+
+.about-myself-container p {
+    margin: 1rem 0;
+    color: #d1d5db;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    animation: text-slide 1.5s ease-in-out;
+}
+
+.welcome-text span {
+    color: #aa92c7;
+}
+
+.greetings {
+    line-height: 4rem;
+}
+
+.greetings h1 {
+    font-size: 4rem;
+}
+
+.greetings h2 {
+    font-size: 2rem;
+}
+
+.profession span {
+    color: #aa92c7;
+}
+
+.greetings p {
+    font-size: 1.5rem;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(3.125rem);
+    transition: none;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slide-fade-in 3s ease-out;
+}
+
+@keyframes slide-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(3.125rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(3.125rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes text-slide {
+    from {
+        transform: translateX(-1.25rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.9375rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        font-size: 1.25rem;
+    }
+
+    .image-container img {
+        width: 18.75rem;
+        height: 18.75rem;
+    }
+
+    .about-myself-container {
+        padding: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    .about-myself-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-myself-container p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .image-container img {
+        width: 15.625rem;
+        height: 15.625rem;
+    }
+
+    .about-myself-container {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .about-myself-container h1 {
+        font-size: 2rem;
+    }
+
+    .about-myself-container p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 0.5rem;
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    .image-container img {
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+
+    .about-myself-container {
+        padding: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    .about-myself-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-myself-container p {
+        font-size: 1rem;
+    }
+}

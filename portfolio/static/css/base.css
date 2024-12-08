@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(34, 15, 42) 0%, rgba(8,3,20,1) 100%), 
+    radial-gradient(circle, rgba(255, 0, 128, 0.2) 0%, rgba(0, 0, 0, 0.6) 70%);
+    background-size: cover, 100%;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar {
+    position: fixed;
+    left: -15.625rem;
+    top: 0;
+    height: 100%;
+    width: 15.625rem;
+    background-color: #241d25;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3.125rem;
+    box-shadow: 0 0 1.25rem 0.1875rem rgba(53, 41, 68, 0.5);
+    transition: 0.3s;
+    z-index: 10000;
+}
+
+#logo {
+    font-size: 2.25rem;
+    color: #3e2868;
+    text-align: center;
+    font-weight: bold;
+    padding: 1.25rem;
+    text-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 0.9375rem 1.25rem;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    font-size: 1.125rem;
+    transition: 0.5s;
+}
+
+ul li a:hover {
+    color: white;
+    background-color: rgba(72, 34, 97, 0.8);
+    transform: scale(1.05);
+    box-shadow: 0 0 0.625rem 0.1875rem rgba(129, 129, 129, 0.5);
+    border-radius: 0.625rem;
+}
+
+#hamburger {
+    display: block;
+    font-size: 1.875rem;
+    color: white;
+    padding: 1.25rem;
+    cursor: pointer;
+    position: fixed;
+    top: 0.1rem;
+    left: 0.1rem;
+    z-index: 1000;
+}
+
+.nav-bar.open {
+    left: 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu.show {
+    display: flex;
+}
+
+@media (max-width: 1024px) {
+    .nav-bar {
+        width: 12.5rem;
+    }
+
+    #logo {
+        font-size: 1.75rem;
+    }
+
+    li a {
+        font-size: 1rem;
+    }
+
+    #hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        width: 10rem;
+    }
+
+    #logo {
+        font-size: 1.5rem;
+    }
+
+    li a {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        width: 8rem;
+    }
+
+    #logo {
+        font-size: 1.25rem;
+    }
+
+    li a {
+        font-size: 0.85rem;
+    }
+
+    #hamburger {
+        font-size: 1.5rem;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+}

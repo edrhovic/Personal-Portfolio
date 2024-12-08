@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/dashboard.css')}}">
+    <script src="{{url_for('static', filename='/js/dashboard.js')}}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="image-container">
+                <img src="{{url_for('static', filename='images/me.png')}}" class="profile-image" alt="Profile Picture">
+            </div>
+            <div class="greetings">
+                <h1 class="welcome-text">Hi, I'm <span>{{ session['firstname'] }}</span></h1>
+                <h2 class="profession">Aspiring <span></span></h2>
+                <p>I'm an aspiring full-stack web developer who loves building websites and applications. I enjoy working on both the design and the backend to bring ideas to life.</p>
+            </div>
+        </div>
+    
+        <div class="about-myself-container hidden" id="about">
+            <h1>About Me</h1>
+            <p class="intro-text">
+                Currently 2nd year college student at Laguna University taking Bachelor of Science in Information Technology Major in System Development
+                An aspiring full-stack web developer passionate about creating innovative, user-friendly web applications.
+                With a foundation in programming, database management, and responsive design, I enjoy turning ideas into fully functional websites.
+                My personal portfolio showcases projects that highlight my skills in Flask, Python, MySQL integration, and modern web technologies.
+            </p>
+        </div>
+    </div>
+</body> 
+</html>
+{% endblock %}
